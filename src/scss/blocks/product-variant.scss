@@ -1,0 +1,31 @@
+.product-variant {
+  display: flex;
+  align-items: baseline;
+  margin-right: 35px;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.product-variant__label {
+  margin-right: 5px;
+  cursor: pointer;
+
+  small {
+    font-size: 12px;
+  }
+
+  &:hover {
+    font-size: 24px;
+  }
+
+  :checked+& {
+    font-weight: 800;
+    font-size: 24px;
+
+    small {
+      font-size: 14px;
+    }
+  }
+}

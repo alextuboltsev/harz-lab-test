@@ -172,25 +172,26 @@ a {
 .product__options {
   display: flex; }
 
-.product__type {
+.product-variant {
   display: flex;
   align-items: baseline;
   margin-right: 35px;
   font-weight: 300;
   font-size: 18px;
-  line-height: 1; }
+  line-height: 1;
+  white-space: nowrap; }
 
-.product__type-label {
+.product-variant__label {
   margin-right: 5px;
   cursor: pointer; }
-  .product__type-label small {
+  .product-variant__label small {
     font-size: 12px; }
-  .product__type-label:hover {
+  .product-variant__label:hover {
     font-size: 24px; }
-  :checked + .product__type-label {
+  :checked + .product-variant__label {
     font-weight: 800;
     font-size: 24px; }
-    :checked + .product__type-label small {
+    :checked + .product-variant__label small {
       font-size: 14px; }
 
 .color-option {

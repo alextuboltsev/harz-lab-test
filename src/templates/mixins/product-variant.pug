@@ -1,0 +1,17 @@
+mixin productVariant(options, name, unit)
+  .product-variant
+    each item, i in options
+      - var itemID = `${name}-${i}`
+
+      input.visually-hidden(
+        id=itemID
+        type="radio",
+        name=name,
+        value=item.value,
+        checked=item.isChecked
+      )
+
+      label.product-variant__label(for=itemID) #{item.value} #{unit}
+
+      if i < options.length - 1
+        | /

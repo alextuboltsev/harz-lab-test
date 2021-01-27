@@ -1,0 +1,15 @@
+mixin colorOption(options)
+  .color-option
+    each item, i in options
+      .color-option__item(class=`color-option__item--${item.name}`)
+        input.visually-hidden(
+          id=`color-option-${i}`,
+          type="radio",
+          name="color",
+          value=item.name,
+          checked=item.isChecked
+        )
+        label.color-option__label(
+          for=`color-option-${i}`
+        )
+          span.visually-hidden!= item.text
