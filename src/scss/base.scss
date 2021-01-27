@@ -1,0 +1,42 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  height: 100%;
+  --scrollbar-width: 0px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+
+  font-family: $base-font;
+  font-size: 12px;
+  line-height: 15px;
+  color: $coldgray-2;
+  background-color: #fff;
+
+  &.no-scroll {
+    overflow: hidden;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: currentColor;
+  text-decoration: none;
+}

@@ -1,0 +1,2 @@
+mixin image(path, attr, type="jpg")
+  img(srcset=`${path}@2x.${type} 2x, ${path}.${type}` src=`${path}.${type}`)&attributes(attr)

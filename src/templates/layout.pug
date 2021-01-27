@@ -1,0 +1,18 @@
+doctype html
+
+include mixins/icon
+include mixins/image
+
+block vars
+  - var pageTitle = ""
+
+html.no-js.no-touch(lang="en")
+
+  include includes/head
+
+  body&attributes(attributes)
+
+    main
+      block content
+
+    script(src="/assets/js/main.min.js")
