@@ -1,0 +1,101 @@
+.color-option {
+  display: flex;
+}
+
+.color-option__item {
+  margin-left: 2px;
+  margin-right: 2px;
+
+  &--lightgray {
+    color: #E0E0E0;
+  }
+
+  &--yellow {
+    color: #EFF0C3;
+  }
+
+  &--black {
+    color: #000;
+  }
+
+  &--white {
+    color: #fff;
+  }
+
+  &--coldgray {
+    color: $coldgray-2;
+  }
+
+  &--red {
+    color: #E30000;
+  }
+
+  &--blue {
+    color: #4470E2;
+  }
+
+}
+
+.color-option__input {
+
+}
+
+.color-option__label {
+  position: relative;
+  display: block;
+  width: 25px;
+  height: 25px;
+
+  background-color: currentColor;
+  background-clip: content-box;
+  border-radius: 50%;
+  border: 6px solid transparent;
+  cursor: pointer;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    content: "";
+
+    .color-option__item--white & {
+      border-color: $coldgray-2;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    left: -6px;
+    bottom: -6px;
+    display: block;
+    border: 1px solid $coldgray-2;
+    border-radius: 50%;
+    opacity: 0;
+    content: "";
+  }
+
+  &:hover {
+    &::before {
+      opacity: 1;
+    }
+  }
+
+  :checked + & {
+    border-color: $coldgray-2;
+
+    &::after {
+      border-color: #fff;
+    }
+
+    .color-option__item--white &::after {
+      border-color: $coldgray-2;
+    }
+  }
+}

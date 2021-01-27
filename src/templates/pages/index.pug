@@ -1,3 +1,83 @@
 extends ../layout
 
 block content
+
+  .container
+    .product
+      .product__gallery.product-gallery
+      .product__content
+        p.product__in-stock <span>15</span>&nbsp;in&nbsp;stock
+        h1.product__title Model Resin
+        p.product__descr Designed for printing models that have high requirements in mechanical properties. Durable, non-shrinking and odorless
+
+        .product__options
+          .product__type
+            input#option-weight-1.visually-hidden(
+              type="radio",
+              name="option-weight",
+              value="1",
+              checked
+            )
+            label.product__type-label(for="option-weight-1") 1 <small>kg</small>
+
+            | /
+
+            input#option-weight-05.visually-hidden(
+              type="radio",
+              name="option-weight",
+              value="0,5"
+            )
+            label.product__type-label(for="option-weight-05") 0,5 <small>kg</small>
+
+          .product__color
+            -
+              var colorOptions = [
+                {
+                  name: "lightgray",
+                  text: "Light gray"
+                },
+                {
+                  name: "yellow",
+                  text: "Yellow"
+                },
+                {
+                  name: "black",
+                  text: "Black"
+                },
+                {
+                  name: "white",
+                  text: "White",
+                  isChecked: true
+                },
+                {
+                  name: "coldgray",
+                  text: "Cold gray"
+                },
+                {
+                  name: "red",
+                  text: "Red"
+                },
+                {
+                  name: "blue",
+                  text: "Blue"
+                },
+              ]
+
+            .color-option
+              each item, i in colorOptions
+                .color-option__item(class=`color-option__item--${item.name}`)
+                  input.color-option__input.visually-hidden(
+                    id=`color-option-${i}`,
+                    type="radio",
+                    name="color",
+                    value=item.name,
+                    checked=item.isChecked
+                  )
+                  label.color-option__label(
+                    for=`color-option-${i}`
+                  )
+                    span.visually-hidden!= item.text
+
+        .product__actions
+          .product__count
+          .product__like
