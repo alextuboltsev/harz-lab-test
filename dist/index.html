@@ -13,7 +13,7 @@
   <meta name="description" content="">
   <title></title>
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;800&amp;display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;800&amp;display=swap">
   <link rel="stylesheet" href="/assets/css/style.min.css">
 </head>
 
@@ -84,7 +84,17 @@
             </div>
           </div>
           <div class="product__actions">
-            <div class="product__count"></div>
+            <div class="product__cost">
+              <div class="cost" data-price="89" data-current-count="0" data-max-count="15">
+                <button class="cost__btn cost__btn--minus" type="button">−</button>
+                <div class="cost__value">
+                  <span class="cost__count">
+                    <span class="cost__count-num"></span>&nbsp;×&nbsp;</span>
+                  <span class="cost__price">89 €</span>
+                </div>
+                <button class="cost__btn cost__btn--plus" type="button">+</button>
+              </div>
+            </div>
             <div class="product__like"></div>
           </div>
         </div>

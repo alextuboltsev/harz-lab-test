@@ -67,5 +67,14 @@ block content
             +colorOption(colorVariants)
 
         .product__actions
-          .product__count
+          .product__cost
+            .cost(data-price="89", data-current-count="0", data-max-count="15")
+              button.cost__btn.cost__btn--minus(type="button") −
+              .cost__value
+                span.cost__count
+                  span.cost__count-num
+                  | &nbsp;×&nbsp;
+                span.cost__price 89 €
+              button.cost__btn.cost__btn--plus(type="button") +
+
           .product__like
