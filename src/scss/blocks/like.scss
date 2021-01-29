@@ -1,0 +1,33 @@
+.like {
+  @include reset-button;
+  display: block;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  outline: 0;
+
+  .icon {
+    display: block;
+    fill: transparent;
+    stroke: $coldgray-2;
+    transition-duration: .2s;
+    transition-property: fill, stroke;
+  }
+
+  &:not(.like--active) {
+    &:hover {
+      .icon {
+        fill: $cold-0;
+        transition-duration: 0s;
+      }
+    }
+  }
+
+  &--active {
+    .icon {
+      fill: #8156BF;
+      stroke: #8156BF;
+      transition-duration: 0s;
+    }
+  }
+}

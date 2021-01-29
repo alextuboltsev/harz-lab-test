@@ -52,11 +52,12 @@
 }
 
 .product__actions {
-
+  display: flex;
+  align-items: center;
 }
 
-.product__count {
-
+.product__cost {
+  margin-right: 26px;
 }
 
 .product__like {

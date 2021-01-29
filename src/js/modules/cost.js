@@ -1,29 +1,29 @@
 export default class Cost {
   constructor(root) {
-    this.root = root;
-    this.minusBtn = this.root.querySelector('.cost__btn--minus');
-    this.plusBtn = this.root.querySelector('.cost__btn--plus');
-    this.countNumElement = this.root.querySelector('.cost__count-num');
-    this.price = parseInt(this.root.dataset.price, 10);
-    this.count = parseInt(this.root.dataset.currentCount, 10);
-    this.maxCount = parseInt(this.root.dataset.maxCount, 10);
+    this._root = root;
+    this._minusBtn = this._root.querySelector('.cost__btn--minus');
+    this._plusBtn = this._root.querySelector('.cost__btn--plus');
+    this._countNumElement = this._root.querySelector('.cost__count-num');
+    this._price = parseInt(this._root.dataset.price, 10);
+    this._count = parseInt(this._root.dataset.currentCount, 10);
+    this._maxCount = parseInt(this._root.dataset.maxCount, 10);
 
     this._onMinusBtnClick = this._onMinusBtnClick.bind(this);
     this._onPlusBtnClick = this._onPlusBtnClick.bind(this);
   }
 
   _updateCount () {
-    if (this.count > 0) {
-      this.root.classList.remove('cost--empty');
-      this.root.classList.add('cost--added');
+    if (this._count > 0) {
+      this._root.classList.remove('cost--empty');
+      this._root.classList.add('cost--added');
     } else {
-      this.root.classList.add('cost--empty');
-      this.root.classList.remove('cost--added');
+      this._root.classList.add('cost--empty');
+      this._root.classList.remove('cost--added');
     }
 
-    this.minusBtn.disabled = this.count <= 0;
-    this.plusBtn.disabled = this.count >= this.maxCount;
-    this.countNumElement.textContent = this.count;
+    this._minusBtn.disabled = this._count <= 0;
+    this._plusBtn.disabled = this._count >= this._maxCount;
+    this._countNumElement.textContent = this._count;
   }
 
   _onMinusBtnClick() {
@@ -35,18 +35,18 @@ export default class Cost {
   }
 
   increase () {
-    this.count++;
+    this._count++;
     this._updateCount();
   }
 
   decrease () {
-    this.count--;
+    this._count--;
     this._updateCount();
   }
 
   init () {
-    this.minusBtn.addEventListener('click', this._onMinusBtnClick);
-    this.plusBtn.addEventListener('click', this._onPlusBtnClick);
+    this._minusBtn.addEventListener('click', this._onMinusBtnClick);
+    this._plusBtn.addEventListener('click', this._onPlusBtnClick);
     this._updateCount();
   }
 }
