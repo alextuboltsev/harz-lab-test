@@ -1,8 +1,29 @@
 extends /layout
 include /mixins/color-option
 include /mixins/product-variant
+include /mixins/product-gallery
 
 append vars
+
+  -
+    var gallery = [
+      {
+        thumb: "assets/img/thumb-01.jpg",
+        photo: "assets/img/slide-01.jpg"
+      },
+      {
+        thumb: "assets/img/thumb-02.jpg",
+        photo: "assets/img/slide-02.jpg"
+      },
+      {
+        thumb: "assets/img/thumb-04.jpg",
+        photo: "assets/img/slide-04.jpg"
+      },
+      {
+        thumb: "assets/img/thumb-05.jpg",
+        photo: "assets/img/slide-05.jpg"
+      },
+    ]
 
   -
     var variants = [
@@ -51,32 +72,36 @@ append vars
 
 block content
 
-  .container
-    .product
-      .product__gallery.product-gallery
-      .product__content
-        p.product__in-stock <span>15</span>&nbsp;in&nbsp;stock
-        h1.product__title Model Resin
-        p.product__descr Designed for printing models that have high requirements in mechanical properties. Durable, non-shrinking and odorless
+  .product-page
+    .container
+      .product
+        .product__gallery
+          +productGallery(gallery)
 
-        .product__options
-          .product__variant
-            +productVariant(variants, "option-weight", "kg")
 
-          .product__color
-            +colorOption(colorVariants)
+        .product__content
+          p.product__in-stock <span>15</span>&nbsp;in&nbsp;stock
+          h1.product__title Model Resin
+          p.product__descr Designed for printing models that have high requirements in mechanical properties. Durable, non-shrinking and odorless
 
-        .product__actions
-          .product__cost
-            .cost(data-price="89", data-current-count="0", data-max-count="15")
-              button.cost__btn.cost__btn--minus(type="button") −
-              .cost__value
-                span.cost__count
-                  span.cost__count-num
-                  | &nbsp;×&nbsp;
-                span.cost__price 89 €
-              button.cost__btn.cost__btn--plus(type="button") +
+          .product__options
+            .product__variant
+              +productVariant(variants, "option-weight", "kg")
 
-          .product__like
-            button.like(type="button")
-              +icon("like", 31, 27)
+            .product__color
+              +colorOption(colorVariants)
+
+          .product__actions
+            .product__cost
+              .cost(data-price="89", data-current-count="0", data-max-count="15")
+                button.cost__btn.cost__btn--minus(type="button") −
+                .cost__value
+                  span.cost__count
+                    span.cost__count-num
+                    | &nbsp;×&nbsp;
+                  span.cost__price 89 €
+                button.cost__btn.cost__btn--plus(type="button") +
+
+            .product__like
+              button.like(type="button")
+                +icon("like", 31, 27)

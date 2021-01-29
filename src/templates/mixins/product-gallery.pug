@@ -1,0 +1,12 @@
+mixin productGallery(photos)
+  .product-gallery
+    .product-gallery__thumbs
+      each item, i in photos
+        .product-gallery__thumb(data-slide=i)
+          img(src=item.thumb, width="70", height="70")
+
+    .product-gallery__slider-wrap.swiper-container
+      .product-gallery__slider.swiper-wrapper
+        each item in photos
+          .product-gallery__slide.swiper-slide
+            img(src=item.photo)

@@ -139,10 +139,19 @@ a {
   .btn:hover, .btn:focus {
     transition-duration: .1s; }
 
+.product-page {
+  padding-top: 170px; }
+
 .product {
   display: flex; }
 
+.product__gallery {
+  position: relative;
+  z-index: 1; }
+
 .product__content {
+  position: relative;
+  z-index: 2;
   width: 350px; }
 
 .product__in-stock {
@@ -179,6 +188,32 @@ a {
 
 .product__cost {
   margin-right: 26px; }
+
+.product-gallery {
+  display: grid;
+  grid-template-columns: 36px 570px;
+  grid-column-gap: 28px;
+  width: 635px; }
+
+.product-gallery__thumbs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 36px;
+  margin-right: 28px; }
+
+.product-gallery__thumb {
+  margin-bottom: 15px;
+  cursor: pointer; }
+  .product-gallery__thumb:hover {
+    opacity: 0.7; }
+
+.product-gallery__slider-wrap {
+  width: 660px;
+  overflow: hidden; }
+
+.product-gallery__slide {
+  background-color: #fff; }
 
 .product-variant {
   display: flex;

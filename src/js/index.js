@@ -1,6 +1,7 @@
 import {getScrollBarWidth, isTouchDevice} from './modules/utils';
 import Cost from './modules/cost';
 import LikeBtn from './modules/like-btn';
+import ProductGallery from './modules/product-gallery';
 
 window.scrollbarWidth = getScrollBarWidth();
 document.documentElement.style.setProperty('--scrollbar-width', `${window.scrollbarWidth}px`);
@@ -27,4 +28,11 @@ const likeBtns = document.querySelectorAll('.like');
 likeBtns.forEach((element) => {
   const likeBtnInstance = new LikeBtn(element);
   likeBtnInstance.init();
+});
+
+
+const productGalleryElements = document.querySelectorAll('.product-gallery');
+productGalleryElements.forEach((element) => {
+  const productGalleryInstance = new ProductGallery(element);
+  productGalleryInstance.init();
 });

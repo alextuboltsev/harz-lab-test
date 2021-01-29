@@ -1,0 +1,36 @@
+.product-gallery {
+  display: grid;
+  grid-template-columns: 36px 570px;
+  grid-column-gap: 28px;
+  width: 635px;
+}
+
+.product-gallery__thumbs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 36px;
+  margin-right: 28px;
+}
+
+.product-gallery__thumb {
+  margin-bottom: 15px;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.product-gallery__slider-wrap {
+  width: 660px;
+  overflow: hidden;
+}
+
+.product-gallery__slider {
+
+}
+
+.product-gallery__slide {
+  background-color: #fff;
+}

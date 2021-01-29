@@ -19,88 +19,123 @@
 
 <body>
   <main>
-    <div class="container">
-      <div class="product">
-        <div class="product__gallery product-gallery"></div>
-        <div class="product__content">
-          <p class="product__in-stock">
-            <span>15</span>&nbsp;in&nbsp;stock</p>
-          <h1 class="product__title">Model Resin</h1>
-          <p class="product__descr">Designed for printing models that have high requirements in mechanical properties. Durable, non-shrinking and odorless</p>
-          <div class="product__options">
-            <div class="product__variant">
-              <div class="product-variant">
-                <input class="visually-hidden" id="option-weight-0" type="radio" name="option-weight" value="1" checked="checked" />
-                <label class="product-variant__label" for="option-weight-0">1 kg</label>/
-                <input class="visually-hidden" id="option-weight-1" type="radio" name="option-weight" value="0,5" />
-                <label class="product-variant__label" for="option-weight-1">0,5 kg</label>
+    <div class="product-page">
+      <div class="container">
+        <div class="product">
+          <div class="product__gallery">
+            <div class="product-gallery">
+              <div class="product-gallery__thumbs">
+                <div class="product-gallery__thumb" data-slide="0">
+                  <img src="assets/img/thumb-01.jpg" width="70" height="70" />
+                </div>
+                <div class="product-gallery__thumb" data-slide="1">
+                  <img src="assets/img/thumb-02.jpg" width="70" height="70" />
+                </div>
+                <div class="product-gallery__thumb" data-slide="2">
+                  <img src="assets/img/thumb-04.jpg" width="70" height="70" />
+                </div>
+                <div class="product-gallery__thumb" data-slide="3">
+                  <img src="assets/img/thumb-05.jpg" width="70" height="70" />
+                </div>
               </div>
-            </div>
-            <div class="product__color">
-              <div class="color-option">
-                <div class="color-option__item color-option__item--lightgray">
-                  <input class="visually-hidden" id="color-option-0" type="radio" name="color" value="lightgray" />
-                  <label class="color-option__label" for="color-option-0">
-                    <span class="visually-hidden">Light gray</span>
-                  </label>
-                </div>
-                <div class="color-option__item color-option__item--yellow">
-                  <input class="visually-hidden" id="color-option-1" type="radio" name="color" value="yellow" />
-                  <label class="color-option__label" for="color-option-1">
-                    <span class="visually-hidden">Yellow</span>
-                  </label>
-                </div>
-                <div class="color-option__item color-option__item--black">
-                  <input class="visually-hidden" id="color-option-2" type="radio" name="color" value="black" />
-                  <label class="color-option__label" for="color-option-2">
-                    <span class="visually-hidden">Black</span>
-                  </label>
-                </div>
-                <div class="color-option__item color-option__item--white">
-                  <input class="visually-hidden" id="color-option-3" type="radio" name="color" value="white" checked="checked" />
-                  <label class="color-option__label" for="color-option-3">
-                    <span class="visually-hidden">White</span>
-                  </label>
-                </div>
-                <div class="color-option__item color-option__item--coldgray">
-                  <input class="visually-hidden" id="color-option-4" type="radio" name="color" value="coldgray" />
-                  <label class="color-option__label" for="color-option-4">
-                    <span class="visually-hidden">Cold gray</span>
-                  </label>
-                </div>
-                <div class="color-option__item color-option__item--red">
-                  <input class="visually-hidden" id="color-option-5" type="radio" name="color" value="red" />
-                  <label class="color-option__label" for="color-option-5">
-                    <span class="visually-hidden">Red</span>
-                  </label>
-                </div>
-                <div class="color-option__item color-option__item--blue">
-                  <input class="visually-hidden" id="color-option-6" type="radio" name="color" value="blue" />
-                  <label class="color-option__label" for="color-option-6">
-                    <span class="visually-hidden">Blue</span>
-                  </label>
+              <div class="product-gallery__slider-wrap swiper-container">
+                <div class="product-gallery__slider swiper-wrapper">
+                  <div class="product-gallery__slide swiper-slide">
+                    <img src="assets/img/slide-01.jpg" />
+                  </div>
+                  <div class="product-gallery__slide swiper-slide">
+                    <img src="assets/img/slide-02.jpg" />
+                  </div>
+                  <div class="product-gallery__slide swiper-slide">
+                    <img src="assets/img/slide-04.jpg" />
+                  </div>
+                  <div class="product-gallery__slide swiper-slide">
+                    <img src="assets/img/slide-05.jpg" />
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="product__actions">
-            <div class="product__cost">
-              <div class="cost" data-price="89" data-current-count="0" data-max-count="15">
-                <button class="cost__btn cost__btn--minus" type="button">−</button>
-                <div class="cost__value">
-                  <span class="cost__count">
-                    <span class="cost__count-num"></span>&nbsp;×&nbsp;</span>
-                  <span class="cost__price">89 €</span>
+          <div class="product__content">
+            <p class="product__in-stock">
+              <span>15</span>&nbsp;in&nbsp;stock</p>
+            <h1 class="product__title">Model Resin</h1>
+            <p class="product__descr">Designed for printing models that have high requirements in mechanical properties. Durable, non-shrinking and odorless</p>
+            <div class="product__options">
+              <div class="product__variant">
+                <div class="product-variant">
+                  <input class="visually-hidden" id="option-weight-0" type="radio" name="option-weight" value="1" checked="checked" />
+                  <label class="product-variant__label" for="option-weight-0">1 kg</label>/
+                  <input class="visually-hidden" id="option-weight-1" type="radio" name="option-weight" value="0,5" />
+                  <label class="product-variant__label" for="option-weight-1">0,5 kg</label>
                 </div>
-                <button class="cost__btn cost__btn--plus" type="button">+</button>
+              </div>
+              <div class="product__color">
+                <div class="color-option">
+                  <div class="color-option__item color-option__item--lightgray">
+                    <input class="visually-hidden" id="color-option-0" type="radio" name="color" value="lightgray" />
+                    <label class="color-option__label" for="color-option-0">
+                      <span class="visually-hidden">Light gray</span>
+                    </label>
+                  </div>
+                  <div class="color-option__item color-option__item--yellow">
+                    <input class="visually-hidden" id="color-option-1" type="radio" name="color" value="yellow" />
+                    <label class="color-option__label" for="color-option-1">
+                      <span class="visually-hidden">Yellow</span>
+                    </label>
+                  </div>
+                  <div class="color-option__item color-option__item--black">
+                    <input class="visually-hidden" id="color-option-2" type="radio" name="color" value="black" />
+                    <label class="color-option__label" for="color-option-2">
+                      <span class="visually-hidden">Black</span>
+                    </label>
+                  </div>
+                  <div class="color-option__item color-option__item--white">
+                    <input class="visually-hidden" id="color-option-3" type="radio" name="color" value="white" checked="checked" />
+                    <label class="color-option__label" for="color-option-3">
+                      <span class="visually-hidden">White</span>
+                    </label>
+                  </div>
+                  <div class="color-option__item color-option__item--coldgray">
+                    <input class="visually-hidden" id="color-option-4" type="radio" name="color" value="coldgray" />
+                    <label class="color-option__label" for="color-option-4">
+                      <span class="visually-hidden">Cold gray</span>
+                    </label>
+                  </div>
+                  <div class="color-option__item color-option__item--red">
+                    <input class="visually-hidden" id="color-option-5" type="radio" name="color" value="red" />
+                    <label class="color-option__label" for="color-option-5">
+                      <span class="visually-hidden">Red</span>
+                    </label>
+                  </div>
+                  <div class="color-option__item color-option__item--blue">
+                    <input class="visually-hidden" id="color-option-6" type="radio" name="color" value="blue" />
+                    <label class="color-option__label" for="color-option-6">
+                      <span class="visually-hidden">Blue</span>
+                    </label>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="product__like">
-              <button class="like" type="button">
-                <svg class="icon" width="31" height="27" aria-hidden="true">
-                  <use xlink:href="assets/img/svg/sprite.svg#icon-like"></use>
-                </svg>
-              </button>
+            <div class="product__actions">
+              <div class="product__cost">
+                <div class="cost" data-price="89" data-current-count="0" data-max-count="15">
+                  <button class="cost__btn cost__btn--minus" type="button">−</button>
+                  <div class="cost__value">
+                    <span class="cost__count">
+                      <span class="cost__count-num"></span>&nbsp;×&nbsp;</span>
+                    <span class="cost__price">89 €</span>
+                  </div>
+                  <button class="cost__btn cost__btn--plus" type="button">+</button>
+                </div>
+              </div>
+              <div class="product__like">
+                <button class="like" type="button">
+                  <svg class="icon" width="31" height="27" aria-hidden="true">
+                    <use xlink:href="assets/img/svg/sprite.svg#icon-like"></use>
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
         </div>
