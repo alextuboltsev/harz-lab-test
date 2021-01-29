@@ -2,6 +2,7 @@ import {getScrollBarWidth, isTouchDevice} from './modules/utils';
 import Cost from './modules/cost';
 import LikeBtn from './modules/like-btn';
 import ProductGallery from './modules/product-gallery';
+import ProductVariant from './modules/product-variant';
 
 window.scrollbarWidth = getScrollBarWidth();
 document.documentElement.style.setProperty('--scrollbar-width', `${window.scrollbarWidth}px`);
@@ -36,3 +37,12 @@ productGalleryElements.forEach((element) => {
   const productGalleryInstance = new ProductGallery(element);
   productGalleryInstance.init();
 });
+
+
+window.onload = () => {
+  const productVariantElements = document.querySelectorAll('.product-variant');
+  productVariantElements.forEach((element) => {
+    const productVariantInstance = new ProductVariant(element);
+    productVariantInstance.init();
+  });
+};
